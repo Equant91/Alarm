@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".CharacteristicAlarmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="8dp"
+            android:descendantFocusability="beforeDescendants"
+            android:elevation="15dp"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="10dp">
+
+            <android.support.constraint.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient">
+
+                <TextView
+                    android:id="@+id/tvTimeSet"
+                    style="@style/MyTextStyleTime"
+                    android:layout_width="148dp"
+                    android:layout_height="57dp"
+                    android:text="12 : 00"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ibColor"
+                    android:layout_width="36dp"
+                    android:layout_height="23dp"
+                    android:layout_marginTop="16dp"
+
+                    android:layout_marginEnd="12dp"
+                    android:background="@color/colorBackground"
+                    android:src="@android:drawable/ic_lock_idle_alarm"
+                    app:layout_constraintEnd_toStartOf="@+id/swichInclusionAlarm"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    style="@style/MyTextStyleHeader"
+                    android:background="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Описание:"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTimeSet" />
+
+                <EditText
+                    android:id="@+id/etDesctiption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/colorText"
+                    android:ems="10"
+                    android:hint="Описание будильника..."
+                    android:inputType="textAutoCorrect"
+                    android:textColor="@color/colorTextSecond"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/tvNumberAlarm"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/dialog_holo_light_frame"
+                    android:focusable="false"
+                    android:gravity="left"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/ibColor"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Switch
+                    android:id="@+id/swichInclusionAlarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="4dp"
+            android:descendantFocusability="blocksDescendants"
+            android:elevation="15dp"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="10dp">
+
+            <android.support.constraint.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="10dp">
+
+                <TextView
+                    android:id="@+id/twRepeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="пн вт ср чт пт сб вс"
+                    android:textColor="@color/colorTextSecond"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/twOnCustumSetting" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    style="@style/MyTextStyleHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/Repeat"
+                    app:layout_constraintBottom_toTopOf="@+id/twRepeat"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/twOnCustumSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="Включена ручная настройка"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="4dp"
+            android:descendantFocusability="blocksDescendants"
+            android:elevation="15dp"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="10dp">
+
+            <android.support.constraint.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="10dp">
+
+                <TextView
+                    android:id="@+id/twMusicName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:maxWidth="250dp"
+                    android:text="Сапоги мертвеца"
+                    android:textColor="@color/colorTextSecond"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/twnotmusic"
+                    app:layout_constraintHorizontal_bias="0.419"
+                    app:layout_constraintStart_toStartOf="@+id/twnotmusic"
+                    app:layout_constraintTop_toBottomOf="@+id/twnotmusic" />
+
+                <TextView
+                    android:id="@+id/twnotmusic"
+                    style="@style/MyTextStyleHeader"
+                    android:layout_width="290dp"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Мелодия будильника"
+                    app:layout_constraintBottom_toTopOf="@+id/twMusicName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardview13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginVertical="1dp"
+            android:layout_marginStart="4dp"
+            android:descendantFocusability="blocksDescendants"
+            android:elevation="15dp"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="4dp"
+            card_view:contentPadding="10dp">
+
+            <android.support.constraint.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                tools:layout_editor_absoluteX="11dp"
+                tools:layout_editor_absoluteY="10dp">
+
+                <TextView
+                    android:id="@+id/twDateRepeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="25.02(вт), 27.02(пт), 29.02(вс)..."
+                    android:textColor="@color/colorTextSecond"
+                    android:textSize="@dimen/text_size_second"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/twnotdate" />
+
+                <TextView
+                    android:id="@+id/twnotdate"
+                    style="@style/MyTextStyleHeader"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="Следующие дни срабатывания"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

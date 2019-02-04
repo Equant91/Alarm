@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alarm">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/handyicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/handyicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".CharacteristicAlarmActivity" />
+        <activity android:name=".dummy.Test" />
+        <activity android:name=".TimePickerActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <receiver
+            android:name=".BroadcastReceiverForAlarm"
+            android:enabled="true"
+            android:exported="true">
+            >
+        </receiver>
+
+        <service
+            android:name=".ServiceForAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
+
+    </application>
+
+</manifest>
